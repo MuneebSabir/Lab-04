@@ -1,0 +1,88 @@
+#background-area{
+	position: absolute;
+    top: 0px;
+    width: 100%; 
+    height: 65%;
+   
+	background-image:url(Image/2.jpg);
+	background-position: 0px 0px;
+   	background-repeat: repeat-x-low;
+   	animation-name: moving-area;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+}
+@-webkit-keyframes moving-area{
+	from {background-position: 0 0;}
+	to {background-position: -200% 0;}
+}
+@keyframes moving-area{
+	from {background-position: 0 0;}
+	to {background-position: -200% 0;}
+}
+
+#wrapper{
+	position:absolute;
+	top:30%;
+	right:10%;
+	wrapper-image:url(Image/missile.jpg);
+   	animation-name: moving-missile;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+}
+
+#wrapper2{
+	position:absolute;
+	top:5%;
+	right:10%;
+	wrapper-image:url(Image/missile.jpg);
+   	animation-name: moving-missile;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+}
+
+@keyframes moving-missile {
+	0%{
+		position:absolute;
+		right:15%;
+}
+	15%{
+		position:absolute;
+		right:20%;
+}
+	30%{
+		position:absolute;
+		right:30%;
+}
+	50%{
+		position:absolute;
+		right:50%;
+}
+	70%{
+		position:absolute;
+		right:60%;
+}
+	85%{
+		position:absolute;
+		right:75%;
+}
+	100%{
+		position:absolute;
+		right:100%;
+}
+}
+#image:target{
+	position:absolute;
+	top:20%
+}
+
+.button{
+	position:absolute;
+	bottom:10%;
+	left:5%;
+}

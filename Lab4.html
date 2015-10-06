@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Aero Fighter</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="background-area">
+
+
+<div id="image">
+<img  src="Image/planes.jpg" width=100 height=100 >
+</div>
+<div id="wrapper">
+    <img src="Image/missile.jpg" width=50 height=50>
+
+</div>
+<div id="wrapper2">
+    <img src="Image/missile.jpg" width=50 height=50>
+
+</div>
+
+<div class="button">
+
+<a href="#none"><button type="button" >Up</button></a>
+<a href="#image"><button type="button" >Down</button></a>
+</div>
+</div>
+
+<script type="text/javascript">
+var pane = $('#background-area'),
+    box = $('#image'),
+    w = pane.width() - box.width(),
+    d = {},
+    x = 3;
+
+function newv(v,a,b) {
+    var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
+    return n < 0 ? 0 : n > w ? w : n;
+}
+
+$(window).keydown(function(e) { d[e.which] = true; });
+$(window).keyup(function(e) { d[e.which] = false; });
+
+setInterval(function() {
+    box.css({
+   
+        top: function(i,v) { return newv(v, 38, 40); }
+    });
+}, 20);
+</script>
+</body>
+</html>
+
+
+ 
