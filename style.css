@@ -2,7 +2,7 @@
 	position: absolute;
     top: 0px;
     width: 100%; 
-    height: 65%;
+    height: 100%;
    
 	background-image:url(Image/2.jpg);
 	background-position: 0px 0px;
@@ -28,7 +28,7 @@
 	right:10%;
 	wrapper-image:url(Image/missile.jpg);
    	animation-name: moving-missile;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	
@@ -41,6 +41,18 @@
 	wrapper-image:url(Image/missile.jpg);
    	animation-name: moving-missile;
     animation-duration: 20s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+}
+
+#wrapper3{
+	position:absolute;
+	top:60%;
+	right:10%;
+	wrapper-image:url(Image/missile.jpg);
+   	animation-name: moving-missile;
+    animation-duration: 10s;
     animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	
@@ -76,10 +88,10 @@
 		right:100%;
 }
 }
-#image:target{
-	position:absolute;
-	top:20%
-}
+#image{
+	width : 104px;
+	height : 104px;
+	}
 
 .button{
 	position:absolute;

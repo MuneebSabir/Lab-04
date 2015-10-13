@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Aero Fighter</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body onload="docReady();" onkeydown="" onkeyup="">
+
+<div id="background-area">
+
+
+<div id="image" style="width:104px; height:104px; top: 0px; left: 0px; position: absolute;">
+<img  src="Image/planes.jpg"  style="width:104px; height:104px;">
+</div>
+<div id="wrapper" style="position:absolute; top:30%; right:10%; ">
+    <img src="Image/missile.jpg" width="50px" height="50px">
+
+</div>
+<div id="wrapper2">
+    <img src="Image/missile.jpg" width=50 height=50>
+
+</div>
+
+<div id="wrapper3">
+    <img src="Image/missile.jpg" width=50 height=50>
+
+</div>
+
+<!--<div class="button">
+
+<a href="#none"><button type="button" >Up</button></a>
+<a href="#image"><button type="button" >Down</button></a>
+</div>-->
+</div>
+
+<script type="text/javascript">
+
+            function upArrowPressed() {
+            var element = document.getElementById("image");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+            
+			
+            }
+
+            function downArrowPressed() {
+            var element = document.getElementById("image");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+			
+            }
+
+            function moveSelection(evt) {
+				
+                switch (evt.keyCode) {
+                    case 38:
+					
+                    upArrowPressed();
+                    break;
+                    case 40:
+                    downArrowPressed();
+                    break;
+                    }
+                };
+
+        function docReady()
+        {
+			
+          
+           document.onkeydown=moveSelection;
+		   setInterval(function(){
+			   
+			   function getObstaclePosition(){
+    var div = document.getElementById("wrapper");
+    if (div.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect = div.getBoundingClientRect ();
+        x = rect.left;
+        y = rect.top;
+        b = rect.bottom;
+        r = rect.right;
+        var positionsArray = [x,y,b,r];
+        return positionsArray;
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+
+function getPlanePosition(){
+    /*get position of plane*/
+    var div2 = document.getElementById("image");
+    if (div2.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect2 = div2.getBoundingClientRect ();
+        x2 = rect2.left;
+        y2 = rect2.top;
+        b2 = rect2.bottom;
+        r2 = rect2.right;
+
+        var positionsArray2 = [x2,y2,b2,r2];
+        return positionsArray2;
+
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+			   
+	var character = getObstaclePosition();
+		var plane    = getPlanePosition();
+	
+    
+    //Get the height and position of the player
+	
+	
+    
+  if(character[0] <= plane[0]+100 && character[1] <= plane[1]+100){
+	  
+	  document.getElementById("background-area").style.animationPlayState = "paused";
+	  
+	  document.getElementById("wrapper").style.animationPlayState = "paused";
+	  document.getElementById("wrapper2").style.animationPlayState = "paused";
+	  document.getElementById("wrapper3").style.animationPlayState = "paused";
+	  	
+	}
+   
+},33);
+
+setInterval(function(){
+			   
+			   function getObstaclePosition(){
+    var div = document.getElementById("wrapper2");
+    if (div.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect = div.getBoundingClientRect ();
+        x = rect.left;
+        y = rect.top;
+        b = rect.bottom;
+        r = rect.right;
+        var positionsArray = [x,y,b,r];
+        return positionsArray;
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+
+function getPlanePosition(){
+    /*get position of plane*/
+    var div2 = document.getElementById("image");
+    if (div2.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect2 = div2.getBoundingClientRect ();
+        x2 = rect2.left;
+        y2 = rect2.top;
+        b2 = rect2.bottom;
+        r2 = rect2.right;
+
+        var positionsArray2 = [x2,y2,b2,r2];
+        return positionsArray2;
+
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+			   
+	var character = getObstaclePosition();
+		var plane    = getPlanePosition();
+	
+    
+    //Get the height and position of the player
+	
+	
+    
+  if(character[0] <= plane[0]+100 && character[1] <= plane[1]+100){
+	  
+	  document.getElementById("background-area").style.animationPlayState = "paused";
+	  
+	  document.getElementById("wrapper").style.animationPlayState = "paused";
+	  document.getElementById("wrapper2").style.animationPlayState = "paused";
+	  document.getElementById("wrapper3").style.animationPlayState = "paused";
+	  	
+	}
+   
+},33);
+
+setInterval(function(){
+			   
+			   function getObstaclePosition(){
+    var div = document.getElementById("wrapper3");
+    if (div.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect = div.getBoundingClientRect ();
+        x = rect.left;
+        y = rect.top;
+        b = rect.bottom;
+        r = rect.right;
+        var positionsArray = [x,y,b,r];
+        return positionsArray;
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+
+function getPlanePosition(){
+    /*get position of plane*/
+    var div2 = document.getElementById("image");
+    if (div2.getBoundingClientRect) {        // Internet Explorer, Firefox 3+, Google Chrome, Opera 9.5+, Safari 4+
+        var rect2 = div2.getBoundingClientRect ();
+        x2 = rect2.left;
+        y2 = rect2.top;
+        b2 = rect2.bottom;
+        r2 = rect2.right;
+
+        var positionsArray2 = [x2,y2,b2,r2];
+        return positionsArray2;
+
+    }
+
+    else {
+        alert ("Your browser does not support this example!");
+    }
+}
+			   
+	var character = getObstaclePosition();
+		var plane    = getPlanePosition();
+	
+    
+    //Get the height and position of the player
+	
+	
+    
+  if(character[0] <= plane[0]+100 && character[1] <= plane[1]+100){
+	  
+	  document.getElementById("background-area").style.animationPlayState = "paused";
+	  
+	  document.getElementById("wrapper").style.animationPlayState = "paused";
+	  document.getElementById("wrapper2").style.animationPlayState = "paused";
+	  document.getElementById("wrapper3").style.animationPlayState = "paused";
+	  	
+	}
+   
+},33);
+
+}
+	   
+
+
+
+</script>
+</body>
+</html>
+
+
+ 
